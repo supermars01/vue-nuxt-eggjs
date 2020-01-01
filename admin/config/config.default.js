@@ -10,13 +10,7 @@ module.exports = appInfo => {
    * built-in config
    * @type {Egg.EggAppConfig}
    **/
-  const config = exports = {
-    security: {
-      csrf: {
-        enable: false
-      }
-    }
-  };
+  const config = exports = {};
 
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1577859071676_9791';
@@ -32,5 +26,10 @@ module.exports = appInfo => {
   return {
     ...config,
     ...userConfig,
+    security: {
+      csrf: {
+        enable: false
+      }
+    }
   };
 };

@@ -11,6 +11,7 @@ class UserController extends BaseController {
     async captcha() {
         let {ctx} = this;
         const captcha = this.service.tools.captcha();
+        console.log('验证码', captcha.text);
         ctx.session.captcha = captcha.text;
         ctx.response.type = 'image/svg+xml';
         ctx.body = captcha.data;
