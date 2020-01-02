@@ -20,6 +20,9 @@ service.interceptors.response.use(
     async response => {
         let {data} = response;
         return data;
+    },
+    error => {
+        return Promise.reject(error);
     }
 )
 

@@ -14,7 +14,7 @@ export default {
 		Logo
 	},
 	async mounted () {
-		const ret = await this.$http('/user/getUserInfo');
+		const ret = await this.$http('/user/info');
 		console.log(ret);
 	}
 }
